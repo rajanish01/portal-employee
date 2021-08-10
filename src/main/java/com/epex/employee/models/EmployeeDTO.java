@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.sql.Date;
+import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
@@ -26,6 +28,8 @@ public class EmployeeDTO {
     private String employeeId;
     @NotEmpty(message = "Office Id Required !")
     private String officeId;
+    private String createdOn;
+    private String lastModifiedOn;
 
     public EmployeeDTO(Employee e) {
         this.setId(e.getId());
@@ -36,5 +40,7 @@ public class EmployeeDTO {
         this.setPhone(e.getPhone());
         this.setEmployeeId(e.getEmployeeId());
         this.setOfficeId(e.getOfficeId());
+        this.setCreatedOn(e.getCreatedOn().toString());
+        this.setLastModifiedOn(e.getLastModifiedOn().toString());
     }
 }

@@ -3,8 +3,11 @@ package com.epex.employee.repository;
 import com.epex.employee.models.EmployeeDTO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Data
 @Entity
@@ -28,6 +31,12 @@ public class Employee {
     private String employeeId;
     @Column(name = "office_id", nullable = false)
     private String officeId;
+    @CreationTimestamp
+    @Column(name = "created_on")
+    private Date createdOn;
+    @UpdateTimestamp
+    @Column(name = "last_modified_on")
+    private Date lastModifiedOn;
 
     public Employee(EmployeeDTO dto) {
         this.setFirstName(dto.getFirstName());

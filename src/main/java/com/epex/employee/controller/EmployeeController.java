@@ -14,7 +14,7 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    @GetMapping
+    @GetMapping("/find")
     @ResponseBody
     public ResponseEntity<?> findEmployee(@RequestParam Long id) {
         try {
@@ -24,7 +24,7 @@ public class EmployeeController {
         }
     }
 
-    @PostMapping
+    @PostMapping("/create")
     @ResponseBody
     public ResponseEntity<?> createEmployee(@RequestBody @Valid EmployeeDTO employeeDTO) {
         try {
