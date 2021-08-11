@@ -19,6 +19,7 @@ public class EmployeeDTO {
     @NotEmpty(message = "Last Name Required !")
     private String lastName;
     @Email(message = "Valid Email Required !")
+    @NotEmpty(message = "Email Can not Be Null/Empty !")
     private String email;
     @NotEmpty(message = "Valid Country Code Required !")
     private String countryCode;
