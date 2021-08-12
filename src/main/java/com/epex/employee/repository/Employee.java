@@ -23,8 +23,6 @@ public class Employee {
     private String lastName;
     @Column(nullable = false, unique = true)
     private String email;
-    @Column(name = "country_code", nullable = false)
-    private String countryCode;
     @Column(nullable = false, unique = true)
     private String phone;
     @Column(name = "emp_id", nullable = false, unique = true)
@@ -42,7 +40,6 @@ public class Employee {
         this.setFirstName(dto.getFirstName());
         this.setLastName(dto.getLastName());
         this.setEmail(dto.getEmail());
-        this.setCountryCode(dto.getCountryCode());
         this.setPhone(dto.getPhone());
         this.setEmployeeId(dto.getEmployeeId());
         this.setOfficeId(dto.getOfficeId());

@@ -1,4 +1,4 @@
-package com.epex.employee.service;
+package com.epex.employee.rest.service;
 
 import com.epex.employee.models.EmployeeDTO;
 import com.epex.employee.repository.Employee;

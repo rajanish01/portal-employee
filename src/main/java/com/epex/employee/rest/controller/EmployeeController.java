@@ -1,7 +1,7 @@
-package com.epex.employee.controller;
+package com.epex.employee.rest.controller;
 
 import com.epex.employee.models.EmployeeDTO;
-import com.epex.employee.service.EmployeeService;
+import com.epex.employee.rest.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,8 +11,12 @@ import javax.validation.Valid;
 @RestController
 public class EmployeeController {
 
+    private final EmployeeService employeeService;
+
     @Autowired
-    private EmployeeService employeeService;
+    public EmployeeController(final EmployeeService employeeService) {
+        this.employeeService = employeeService;
+    }
 
     @GetMapping("/find")
     @ResponseBody

@@ -4,7 +4,6 @@ CREATE TABLE emp_master (
     first_name VARCHAR(35) NOT NULL,
     last_name VARCHAR(35) NOT NULL,
     email VARCHAR(50) UNIQUE NOT NULL,
-    country_code VARCHAR(5) NOT NULL,
     phone VARCHAR(12) NOT NULL,
     emp_id VARCHAR(25) NOT NULL UNIQUE,
     office_id VARCHAR(25) NOT NULL,

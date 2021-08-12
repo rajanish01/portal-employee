@@ -21,8 +21,6 @@ public class EmployeeDTO {
     @Email(message = "Valid Email Required !")
     @NotEmpty(message = "Email Can not Be Null/Empty !")
     private String email;
-    @NotEmpty(message = "Valid Country Code Required !")
-    private String countryCode;
     @Size(min = 4, max = 12, message = "Valid Phone Number Required !")
     private String phone;
     @NotEmpty(message = "Employee Id Required !")
@@ -37,7 +35,6 @@ public class EmployeeDTO {
         this.setFirstName(e.getFirstName());
         this.setLastName(e.getLastName());
         this.setEmail(e.getEmail());
-        this.setCountryCode(e.getCountryCode());
         this.setPhone(e.getPhone());
         this.setEmployeeId(e.getEmployeeId());
         this.setOfficeId(e.getOfficeId());
